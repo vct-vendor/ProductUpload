@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright (c)
+ *
+ * @see       PROJECT_LICENSE.txt
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="vct">
+            <label>VCT</label>
+        </tab>
+
+        <section id="vct_productupload" showInDefault="1" showInStore="1" showInWebsite="1">
+            <tab>vct</tab>
+            <label>Product Upload</label>
+            <resource>Vct_ProductUpload::config</resource>
+
+            <group id="general" translate="label" showInDefault="1" showInStore="1" showInWebsite="1">
+                <label>General</label>
+                <attribute type="expanded">1</attribute>
+
+                <field id="file" translate="label comment" type="Magento\Config\Block\System\Config\Form\Field\File" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Microsoft Excel File</label>
+                    <backend_model>Vct\ProductUpload\Block\System\Config\Form\Field\File</backend_model>
+                    <upload_dir config="system" scope_info="1">vct/productupload</upload_dir>
+                    <comment><![CDATA[<strong style="color:red">Only</strong> <a href="https://support.microsoft.com/en-us/office/file-formats-that-are-supported-in-excel-0943ff2c-6014-4e8d-aaea-b83d51d46247#bmexcelformats" target="_blank">Microsoft Excel formats</a> are allowed: xla, xlam, xlr, xls, xlsb, xlsm, xlsx, xlt, xltm, xltx, xlw, xml]]></comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

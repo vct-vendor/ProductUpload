@@ -1,0 +1,38 @@
+{
+    "name": "vct/productupload",
+    "description": "The module is made for test purposes only!",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": "OSL-3.0",
+    "homepage": "https://github.com/vct-vendor/ProductUpload",
+    "authors": [
+        {
+            "name": "VCT vendor",
+            "email": "vct.vendor@gmail.com"
+        }
+    ],
+    "keywords": [
+        "PHP",
+        "OpenXML",
+        "Excel",
+        "xlsx",
+        "xls",
+        "ods",
+        "gnumeric",
+        "spreadsheet"
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "~7.4.0||~8.1.0",
+        "magento/framework": "103.0.*",
+        "phpoffice/phpspreadsheet": "^1.26"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Vct\\ProductUpload\\": ""
+        }
+    }
+}
